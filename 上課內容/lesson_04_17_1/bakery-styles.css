@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+html{
+    box-sizing:border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+
 body {
     font-family: Georgia, serif;
     font-size: 100%;
@@ -7,6 +15,11 @@ body {
 }
 
 /* link styles */
+a{
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding-bottom: .2em;
+}
 a:link,
 a:visited {
     color: #DC6903;
@@ -25,6 +38,7 @@ header {
     background: url(images/croissants_banner.jpg) no-repeat center center;
     background-size: cover;
     text-align: center;
+    height: 15em;
 }
 
 header p {
@@ -62,12 +76,17 @@ main {
     background-color: white;
     line-height: 1.8em;
     color: #555;
+    padding: 1em;
+    border: double 4px #EADDC4;
 }
 
 h3 {
     text-transform: uppercase;
     letter-spacing: .2em;
     color: #7A0002;
+    border-top:1px solid;
+    border-left :1px solid;
+    padding-left: 1em;
 }
 
 p.more {
@@ -80,6 +99,8 @@ p.more {
 aside {
     background: url(images/scallop.png) repeat-y left top;
     background-color: #F6F3ED;
+    padding-left: 45px;
+    border-top-right-radius: 25px;
 }
 
 /* misc styles */
@@ -87,6 +108,7 @@ footer {
     color: #EADDC4;
     text-align: center;
     font-size: .8em;
+    padding: 1em;
 }
 
 h2 {
