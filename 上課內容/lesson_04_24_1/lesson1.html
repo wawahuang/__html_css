@@ -45,7 +45,7 @@
         }
         section#banner{
             box-sizing: border-box;
-            background-color: antiquewhite;
+            /*background-color: antiquewhite;*/
             width: 50%;
             margin: 1em auto;
         }
@@ -60,37 +60,45 @@
             text-align: center;
             line-height: 1.5em;
             color: #555;
+        }       
+
+        section#banner div{
+            text-align: center;
         }
-
-        
-
-        section#banner div::after{
-            content: " ";
-            display: block;
-            clear: both;
-            
-        }
-
 
         section#banner div a{
-            display: block;
+            display: inline-block;
             padding: 1em 1.5em;
             width: 5em;
             background-color: #55A8DA;
             text-align: center;
             font-weight: bolder;
             color: white;
-            border-radius: .8em;
-            float: left;
+            border-radius: .8em;            
         }
         section#banner div a{
             text-decoration: none;
         }    
+
+        section#banner div a:hover{
+
+
+        }
+
+        main{
+            margin: 1em auto;
+        }
+
+        main h3{
+            font-size: 1.5em;
+            color: #555;
+            border-bottom: #555 solid 1px;
+            padding-bottom: 1em;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div></div>
         <ul>
             <li id="logo"><img src="images/logo.png" alt="logo"></li>
             <li><a href="#" class ="active">Home</a></li>
@@ -109,6 +117,9 @@
         </div>
         
     </section>
+    <main>
+        <h3>Columns with icons</h3>
+    </main>
     
 </body>
 </html>
