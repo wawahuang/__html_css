@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="css/normalize.css"
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Bootstrap Example</title>
     <style>
         <body{
@@ -94,10 +94,21 @@
             border-bottom: #555 solid 1px;
             padding-bottom: 1em;
         }
+        
+        main div#icons{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
 
         main div#icons section{
             box-sizing: border-box;
-            border: solid 1px red;
+            /*border: solid 1px red;*/
+            flex: 1 1 auto;
+            padding: 1em;
+        }
+        main h4{
+            font-size: 1.5em;
         }
     </style>
 </head>
@@ -123,18 +134,25 @@
     </section>
     <main>
         <h3>Columns with icons</h3>
-        <div id="icons">
-        <div>
+        <div id="icons">        
             <section>
                 <img src="images/icon1.png" alt="icon1">
+                <h4>Featured title</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ipsam, vero deleniti, voluptates error laudantium doloremque corporis numquam animi asperiores vel pariatur unde totam voluptate quis quos ratione aut aliquid!</p>
+                <p><a href="#">Call to action ></a></p>
             </section>
             <section>
-                <img src="images/icon1.png" alt="icon1">
+                <img src="images/icon2.png" alt="icon2">
+                <h4>Featured title</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eum corrupti vero exercitationem sed quidem minima illo distinctio sint, repellat libero laborum. Voluptas quam ratione delectus ex, officia expedita culpa.</p>
+                <p><a href="#">Call to action ></a></p>
             </section>
             <section>
-                <img src="images/icon1.png" alt="icon1">
-            </section>
-        </div>
+                <img src="images/icon3.png" alt="icon3">
+                <h4>Featured title</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sed nam libero ipsam earum ex veritatis modi cum, sequi iure commodi, suscipit tempore nemo exercitationem sint saepe accusamus, necessitatibus deserunt.</p>
+                <p><a href="#">Call to action ></a></p>
+            </section>        
     </main>
     
 </body>
