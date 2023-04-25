@@ -8,11 +8,11 @@
     <title>Response Web Design(RWD)</title>
 
     <style>
-        /*手機*/
-        #container {
+       /*手機*/
+       #container {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 10em 15em 60em 15em 5em;
+            grid-template-rows: auto 15em 60em 15em 5em;
             grid-template-areas:
                 "header"
                 "aside"
@@ -44,6 +44,23 @@
         footer {
             grid-area: footer;
             background-color: mediumturquoise;
+        }
+
+        /*header-layout*/
+        header{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        header ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        header li a:link{
+            text-decoration: none;
         }
 
         @media(min-width: 768px) {
@@ -80,12 +97,12 @@
 <body>
     <div id="container">
         <header>
+            <img src="images/logo.png" alt="logo">
             <nav>
                 <ul>
-                    <li id="logo"><img src="images/logo.png" alt="logo"></li>
                     <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#" >Feature</a></li>
-                    <li><a href="#" >Price</a></li>
+                    <li><a href="#">Feature</a></li>
+                    <li><a href="#">Price</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
