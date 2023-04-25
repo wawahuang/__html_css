@@ -8,28 +8,37 @@
     <style>
         #layout{
             display: grid;
-            grid-template-rows: 100px 400px 100px;
-            grid-template-columns: 200px 500px 200px;
+            grid-template-rows: [header-start] 100px [content-start] 400px [footer-start] 100px;
+            grid-template-columns: [ads] 1fr [main] 2fr [links] 1fr;
+            grid-template-areas: 
+            "header header header"
+            "ads    main   links"
+            "footer footer footer";
         }
         #one{
+            grid-area: header;
             font-size: 3em;
             background-color: brown;
         }
         #two{
+            grid-area: ads;
             font-size: 3em;
-            background-color: rgb(42, 165, 95);
+            background-color: aquamarine;
         }
         #three{
+            grid-area: main;
             font-size: 3em;
-            background-color: rgb(242, 121, 15);
+            background-color: coral;
         }
         #four{
+            grid-area: links ;
             font-size: 3em;
-            background-color: rgb(224, 230, 67);
+            background-color: bisque;
         }
         #five{
+            grid-area: footer ;
             font-size: 3em;
-            background-color: rgb(219, 166, 86);
+            background-color: darkgoldenrod;
         }
     </style>
 </head>
