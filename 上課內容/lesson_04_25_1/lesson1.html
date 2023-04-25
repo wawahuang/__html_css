@@ -9,36 +9,40 @@
         #layout{
             display: grid;
             grid-template-rows: [header-start] 100px [content-start] 400px [footer-start] 100px;
-            grid-template-columns: [ads] 1fr [main] 2fr [links] 1fr;
-            grid-template-areas: 
+            grid-template-columns: [ads] 15em [main] minmax(15em, 45em) [links] 10em;
+            grid-template-areas:
             "header header header"
             "ads    main   links"
             "footer footer footer";
         }
         #one{
-            grid-area: header;
+            grid-area:header;
             font-size: 3em;
             background-color: brown;
         }
+
         #two{
-            grid-area: ads;
+            grid-area:ads;
             font-size: 3em;
-            background-color: aquamarine;
+            background-color:aquamarine;
         }
+
         #three{
-            grid-area: main;
+            grid-area:main;
             font-size: 3em;
-            background-color: coral;
+            background-color:coral;
         }
+
         #four{
-            grid-area: links ;
+            grid-area:links;
             font-size: 3em;
-            background-color: bisque;
+            background-color:bisque
         }
+
         #five{
-            grid-area: footer ;
+            grid-area:footer;
             font-size: 3em;
-            background-color: darkgoldenrod;
+            background-color:darkgoldenrod;
         }
     </style>
 </head>
@@ -50,5 +54,6 @@
         <div id="four">Four</div>
         <div id="five">Five</div>
     </div>
+    
 </body>
 </html>
