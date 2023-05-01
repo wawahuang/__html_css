@@ -24,7 +24,7 @@ body{
 
 #layout main{
     grid-area: content;
-    background-color: cornsilk;
+    background-color: rgba(255, 228, 121, 0.603);
 }
 
 #layout footer{
@@ -39,8 +39,8 @@ body{
 }
 
 #cards section{
-    flex :0 1 100%;
-    height:100px;
+    flex :0 1 100%;  
+    border:1px black solid;  
     
 }
 
@@ -49,8 +49,12 @@ body{
 }
 
 #cards section.s2{
-    background-color: brown
-    ;
+    background-color: brown;
+}
+#cards h1{
+    text-align: center;
+    margin:1em 0em;
+
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -63,17 +67,20 @@ body{
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     #root {
-        max-width:720px;
-        
-        
+        max-width:720px;     
+    }
+    #cards section{ 
+        flex :0 1 50%;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     #root {
-        max-width: 960px;
-        
+        max-width: 960px;        
+    }
+    #cards section{
+        flex :1 1 33%;
     }
 }
 
