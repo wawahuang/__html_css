@@ -1,0 +1,3 @@
+https://gist.github.com/marharyta/b83a3683085eb42867bbcefb34687af8
+
+https://cli.github.com/manual/gh_repo_create
