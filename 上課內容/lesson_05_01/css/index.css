@@ -19,12 +19,12 @@ body{
 
 #layout header{
     grid-area: header;
-    background-color: beige;
+    background-color: white;
 }
 
 #layout main{
     grid-area: content;
-    background-color: rgba(255, 228, 121, 0.603);
+    background-color: beige;
 }
 
 #layout footer{
@@ -53,10 +53,22 @@ body{
 }
 #cards h1{
     text-align: center;
-    margin:1em 0em;
+    margin:2em 0em;
 
 }
 
+header h2{
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+    color:rgb(106, 106, 106);
+    margin-top: .3em;
+}
+
+header img{
+    display: block;
+    margin:1em auto 2em;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {  
     #root {
