@@ -17,6 +17,8 @@ body{
     "footer"
 }
 
+
+
 #layout header{
     grid-area: header;
     background-color: white;
