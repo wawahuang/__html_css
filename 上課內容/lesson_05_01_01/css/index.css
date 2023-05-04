@@ -45,10 +45,11 @@ header h2{
     margin-top: 3em;
     color: lightgray;
 }
+
 #cards{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     
 }
 
@@ -68,43 +69,54 @@ header h2{
     
 }
 #cards .card .cardText{
-    flex: 1 1 100px;
+    flex: 0 1 100px;
     padding: .5em;
 }
 #cards .card .cardFooter{
-    flex: 1 1 50px;
-    display: block; 
+    flex: 0 1 50px;
+    
 }
 
 #cards .cardFooter {    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1em;
     
 } 
 #cards .cardFooter .view{
-    display: block;
-    border-radius: .4em 0 0 0 .4em;
+    flex: 0 1 auto;
+    padding: .5em;
+    border-radius: .4em 0 0 .4em;
     
 }    
 #cards .cardFooter .edit{
-    display: block;    
+    flex: 0 1 auto;
+    padding: 0.5em; 
     border-radius: 0 .4em .4em 0;
 }  
 
+
 #cards .cardFooter a{
+    text-decoration: none;
     border:1px solid rgb(94, 93, 93);
     background-color: lightgray;
-    font-size: .4em;
+    font-size: .8em;
     color: aliceblue;        
 }
 #cards .cardFooter a:hover{
     color: black;
 }
 
- #cards .cardFooter .span{    
+#cards .cardFooter span{
+    flex: 0 1 auto;
     margin-left: auto;
- }
+    padding: 0.5em;
+    font-size:0.8em;
+    color:rgb(126,126,126);
+}
 
 footer ul {
     display: flex;
@@ -141,43 +153,45 @@ footer ul img,footer ul a {
 
 
 
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { 
-    #root{
-        width: 100%;   
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    #root {
+        width:100%;
     }
- }
+}
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-    #root{
-        width: 100%;   
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    #root {
+        max-width:720px;     
     }
-    #cards selection{
-        flex: 0 1 50%;
+    #cards section{ 
+        flex :0 1 50%;
     }
+}
 
-/* Large devices (desktops, 992px and up)*/
+/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-    #root{
-        width: 100%;   
+    #root {
+        max-width: 960px;        
     }
-    #cards selection{
-        flex: 0 1 33%;
+    #cards section{
+        flex :1 1 33%;
     }
- }
+}
 
-/* X-Large devices (large desktops, 1200px and up)*/
+/* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    #root{
-        width: 100%;   
+    #root {
+        max-width: 1140px;
+
     }
- }
+}
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {
-    #root{
-        width: 100%;   
+@media (min-width: 1400px) { 
+    #root {
+        max-width: 1320px;
+        
     }
- }
-
+}
