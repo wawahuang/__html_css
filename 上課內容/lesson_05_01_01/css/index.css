@@ -1,145 +1,183 @@
-#root {
-    width: 100%;
+body{
+    background-color: lightgray;
+}
+
+#root{
+    width: 100%;  
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
 }
 
 #layout{
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns:auto auto auto ;
-    grid-area: 
-    header
-    content
-    footer
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"    
 }
+
 #layout header{
     grid-area: header;
     background-color: white;
 }
 #layout main{
     grid-area: content;
-    background-color: white;
+    background-color: beige;
 }
-#layout footerr{
+#layout footer{
     grid-area: footer;
-    background-color: white;
+    background-color: aquamarine;
+}
+header img{
+    display: block;
+    margin: 1em  auto 2em ;
+
+
+}
+
+
+header h2{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.5em;
+    margin-top: 3em;
+    color: lightgray;
 }
 #cards{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-}
-#cards h1{
-    text-align: center;
-    margin:2em 0em;
-}
-#cards section{
-    flex: 0 1 100%;   
-    border: 1px solid black;
+    flex-wrap: nowrap;
+    
 }
 
-/*#cards section.s1{
-    background-color: blueviolet;
-}*/
-
-/*#cards section.s2{
-    background-color: brown;
-}*/
 #cards .card{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-}    
-#cards .card .cardTitle{
-    flex: 0 1 200px;
 }
-header h2{
-    font-size: 2em;
-    line-height: 1.5em;
-    margin-top: 2em;
-    text-align: center;
-    color: lightgray;
 
+#cards section{
+    flex: 0 1 100%;
+    padding: 2em;
 }
-header img{
+
+#cards .card .cardTitle{
+    flex:0 1 200px;
     
 }
+#cards .card .cardText{
+    flex: 1 1 100px;
+    padding: .5em;
+}
+#cards .card .cardFooter{
+    flex: 1 1 50px;
+    display: block; 
+}
 
-footer ul{
-    margin: 2em 2em 0 0 ;
-    padding: 0;
+#cards .cardFooter {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+} 
+#cards .cardFooter .view{
+    display: block;
+    border-radius: .4em 0 0 0 .4em;
+    
+}    
+#cards .cardFooter .edit{
+    display: block;    
+    border-radius: 0 .4em .4em 0;
+}  
+
+#cards .cardFooter a{
+    border:1px solid rgb(94, 93, 93);
+    background-color: lightgray;
+    font-size: .4em;
+    color: aliceblue;        
+}
+#cards .cardFooter a:hover{
+    color: black;
+}
+
+ #cards .cardFooter .span{    
+    margin-left: auto;
+ }
+
+footer ul {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
 }
+footer li{
+    display: block;
+    margin: 2em;
+}
+footer li a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: white;
+}
+footer li a:hover{
+    color: rgb(142, 140, 140);
+}
 footer address{
-    font-size: .5em;
+    font-size: .8em;
     text-align: center;
     color: lightgray;
 }
-
-footer ul a:link{
-    text-decoration:none;
-    color: rgb(99, 96, 96);
-}
-footer ul a:hover{
-    text-decoration: none;
-    color: black;
-}
-footer ul img,footer ul a{
+footer ul img,footer ul a {
     display: block;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto ;
+    text-align: center;   
+    
 }
-footer ul li{
-    list-style-type: none;
-    padding: 0 1em;
-}
+
+
+
 
 /* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    #root {
-        width: 100%;
-
+@media (min-width: 576px) { 
+    #root{
+        width: 100%;   
     }
-}
+ }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    #root {
-        width: 100%;
-
+    #root{
+        width: 100%;   
     }
-    #cards section{
+    #cards selection{
         flex: 0 1 50%;
     }
-}
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-    #root {
-        width: 100%;
-
+@media (min-width: 992px) { 
+    #root{
+        width: 100%;   
     }
-}
-
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-    #root {
-        width: 100%;
-
-    }
-    #cards section{
+    #cards selection{
         flex: 0 1 33%;
     }
-}
+ }
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    #root{
+        width: 100%;   
+    }
+ }
 
 /* XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {
-    #root {
-        width: 100%;
-
+    #root{
+        width: 100%;   
     }
-}
+ }
+
